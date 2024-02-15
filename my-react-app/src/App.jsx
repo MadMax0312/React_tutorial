@@ -1,9 +1,9 @@
-import ButtonClick from "./ButtonClick";
+import ProfilePic from "./ProfilePic";
 
 function App() {
     return (
         <>
-        <h1><ButtonClick/></h1>
+        <ProfilePic/>
         </>
     );
 }
