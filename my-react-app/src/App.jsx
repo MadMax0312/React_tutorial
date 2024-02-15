@@ -1,10 +1,12 @@
-
-import Shopping from "./Shopping";
+import ButtonClick from "./ButtonClick";
 
 function App() {
     return (
-        <Shopping/>
+        <>
+        <h1><ButtonClick/></h1>
+        </>
     );
 }
 
 export default App
+ 
