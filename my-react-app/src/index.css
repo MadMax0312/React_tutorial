@@ -1,18 +1,24 @@
-.welcome-message {
-    font-size: 2em;
-    background-color: hsl(120, 100%, 42%);
+.list-category {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: hsl(0, 0%, 20%);
     text-align: center;
-    padding: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(227, 170, 170);
+    border: 3px solid;
     border-radius: 50px;
-    margin: 70px;
 }
 
-.login-prompt {
+.list-items li{
     font-size: 2em;
-    background-color: rgb(205, 29, 29);
-    color: white;
-    padding: 10px;
     text-align: center;
-    border-radius: 50px;
-    margin: 70px;
+    text-decoration: none;
+    text-transform: capitalize;
+    list-style: none;
+
+}
+
+.list-items li:hover {
+    color: hsl(0, 0%, 45%);
+    cursor: pointer;
 }
