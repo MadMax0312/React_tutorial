@@ -2,13 +2,20 @@
 
 function ButtonClick() {
 
-    const handleClick = () => alert("OUCH!")
+    let count = 0
 
-    const handleClick2 = (name) => alert(`${name} stop clicking me!`)
+    const handleClick2 = (name) => {
+        if(count < 3) {
+            count++
+            alert(`${name} you clicked me ${count} time`)
+        } else {
+            alert(`${name}!!!!! stop clicking me`)
+        }
+    }
 
     return (
         <>
-        <button onClick={() => handleClick2('basheer')}>Click Me &#x1F60A;</button>
+        <button onClick={(name) => handleClick2('basheer')}>Click Me &#x1F60A;</button>
         </>
 
     )
