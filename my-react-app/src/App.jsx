@@ -1,9 +1,9 @@
-import MyComponent3 from "./MyComponent3";
+import UpdateArray from "./UpdateArray";
 
 function App() {
     return (
         <>
-        <MyComponent3/>
+        <UpdateArray/>
         </>
     );
 }
