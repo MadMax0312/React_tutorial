@@ -1,9 +1,9 @@
-import UpdaterFunctionn from "./UpdaterFunctionn";
+import MyComponent3 from "./MyComponent3";
 
 function App() {
     return (
         <>
-        <UpdaterFunctionn/>
+        <MyComponent3/>
         </>
     );
 }
