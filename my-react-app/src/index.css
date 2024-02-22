@@ -1,24 +1,21 @@
-.list-category {
-    font-size: 2.5em;
-    font-weight: bold;
-    color: hsl(0, 0%, 20%);
-    text-align: center;
-    margin-bottom: 10px;
-    background-color: rgb(227, 170, 170);
-    border: 3px solid;
-    border-radius: 50px;
+.contain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.list-items li{
-    font-size: 2em;
-    text-align: center;
-    text-decoration: none;
-    text-transform: capitalize;
-    list-style: none;
-
+.butt {
+    padding: 5px 10px;
+    margin: 5px;
 }
 
-.list-items li:hover {
-    color: hsl(0, 0%, 45%);
-    cursor: pointer;
+.butt button {
+    padding: 5px 10px;
+    margin-right: 10px;
 }
+
+.count {
+    font-size: 25px;
+}
+
