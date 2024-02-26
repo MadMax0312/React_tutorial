@@ -1,17 +1,24 @@
-import Practice4 from './Practice4'
-import { useState } from 'react';
+import About from "./Component/About";
+import Profile from "./Component/Profile";
+import { Routes, Route, Link, useNavigate } from 'react-router-dom'
+
+import { useState } from "react";
 
 function App() {
-
-    const [state, setState] = useState(false)
+    const [state, setState] = useState('')
+    const navigate = useNavigate();
 
     return (
         <div>
-            <h1 onClick={()=>setState(!state)}>Mount</h1>
-            { state && <Practice4/> }
+            <button onClick={() => navigate('/about')}>About Me</button>
+            <button onClick={() => navigate('/profile')}>Profile</button>
+            <Routes>
+                <Route element={<About />} path="/about" />
+                <Route element={<Profile />} path="/profile" />
+            </Routes>
         </div>
     );
 }
 
-export default App
-     
+
+export default App;
