@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import {useState} from "react";
 
 function Practice3() {
 
@@ -10,7 +10,7 @@ function Practice3() {
         setName(name)
     }
 
-    function handleAddName(e) {
+    function handleAddName() {
         setNew(name)
         document.getElementById('hot').value = '';
     }
