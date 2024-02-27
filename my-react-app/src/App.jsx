@@ -1,26 +1,48 @@
-import About from "./Container/About";
-import Profile from "./Container/Profile";
-import { Routes, Route, Link, useNavigate } from 'react-router-dom'
-import {AppContext} from './AppContext'
-
-import { useState } from "react";
+import {useEffect, useState} from 'react'
 
 function App() {
-    const [state, setState] = useState(10)
-    const navigate = useNavigate();
+    
+    const [count, setCount] = useState(0)
+    const [color, setColor] = useState('white')
+    const [boom, setBoom] = useState(false)
+
+    useEffect(()=>{
+        if(count>0 && count%3===0) {
+            const id = setTimeout(()=>{
+                setBoom(true)
+            })
+            return () => {
+                clearTimeout(id)
+            }
+        } else {
+            setBoom(false)
+        }
+    },[count])
 
     return (
-        <div>
-            <button onClick={() => navigate('/about')}>About Me</button>
-            <button onClick={() => navigate('/profile')}>Profile</button>
-            <AppContext.Provider value={state}>
+        <div style={{background:color}}>
 
-            <Routes>
-                <Route path="/about" element={<About />} />
-                <Route path="/profile" element={<Profile />} />
-            </Routes>
+            <button onClick={()=>{
+                setCount(count+1)
+            }}>Incr</button>
 
-            </AppContext.Provider>
+            <h4>Count: {count}</h4>
+
+            <button onClick={()=>{
+                setCount(count-1)
+            }}>Decr</button>
+
+            <p onClick={()=>{
+                setColor('Green')
+            }}>Green</p>
+            
+            <p onClick={()=>{
+                setColor('Red')
+            }}>Red</p>
+
+            {
+                boom && <div>BOOM</div>
+            }
         </div>
     );
 }
