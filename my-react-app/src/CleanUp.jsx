@@ -16,11 +16,15 @@ function MyComponent() {
         console.log('EVENT LISTENER ADDED')
 
         return () => {
-            window.removeEventListener("resize")
+            window.removeEventListener("resize", handleResize)
             console.log("EVENT LISTENER REMOVED")
         }
 
     },[])
+
+    useEffect(()=>{
+        document.title = `width ${width}`
+    },[width])
 
 
   return (

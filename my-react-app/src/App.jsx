@@ -1,13 +1,11 @@
-import MyComponent from "./CleanUp";
-
+import DigitalClock from "./DigitalClock";
 
 function App() {
-    
 
     return (
         <div>
 
-          <MyComponent/>
+          <DigitalClock/>
         </div>
     );
 }
