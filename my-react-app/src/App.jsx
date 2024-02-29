@@ -1,4 +1,5 @@
-import MyComponent from "./useEffect";
+import MyComponent from "./CleanUp";
+
 
 function App() {
     
@@ -6,7 +7,7 @@ function App() {
     return (
         <div>
 
-            <MyComponent/>
+          <MyComponent/>
         </div>
     );
 }
