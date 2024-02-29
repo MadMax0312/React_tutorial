@@ -1,27 +1,11 @@
-import {useState} from 'react'
 
-function useToggle(initialValue = false) {
-
-    const [value, setValue] = useState(initialValue)
-
-    const toggle = ()=> {
-        setValue(v => !v)
-    }
-
-    return [value, toggle]
-
-}
+import MyComponent from './useContext'
 
 function App() {
 
-    const [isToggled, toggle] = useToggle()
-
     return(
         <div>
-            <button onClick={toggle}>Click Me</button>
-            {
-                isToggled && <p>Toggled</p>
-            }
+            <MyComponent/>
         </div>
     )
 }
