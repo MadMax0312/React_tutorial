@@ -1,14 +1,24 @@
-import DigitalClock from "./DigitalClock";
+import {useState} from 'react'
 
-function App() {
-
-    return (
-        <div>
-
-          <DigitalClock/>
-        </div>
-    );
+function useToggle(inVal = false) {
+    const [value, setValue] = useState(inVal)
+    
+    const toggle = () => {
+        setValue(p => !p)
+    }
+    
+    return [value, toggle]
 }
 
+function App() {
+    const [istoggled, toggle] = useToggle(false)
+    
+    return (
+        <div>
+        <button onClick={toggle}>Toggle</button>
+        { istoggled && <p> Toggle is ON </p> }
+        </div>
+        )
+}
 
-export default App;
+export default App
