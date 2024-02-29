@@ -1,24 +1,29 @@
 import {useState} from 'react'
 
-function useToggle(inVal = false) {
-    const [value, setValue] = useState(inVal)
-    
-    const toggle = () => {
-        setValue(p => !p)
+function useToggle(initialValue = false) {
+
+    const [value, setValue] = useState(initialValue)
+
+    const toggle = ()=> {
+        setValue(v => !v)
     }
-    
+
     return [value, toggle]
+
 }
 
 function App() {
-    const [istoggled, toggle] = useToggle(false)
-    
-    return (
+
+    const [isToggled, toggle] = useToggle()
+
+    return(
         <div>
-        <button onClick={toggle}>Toggle</button>
-        { istoggled && <p> Toggle is ON </p> }
+            <button onClick={toggle}>Click Me</button>
+            {
+                isToggled && <p>Toggled</p>
+            }
         </div>
-        )
+    )
 }
 
 export default App
