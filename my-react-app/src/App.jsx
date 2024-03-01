@@ -1,5 +1,5 @@
+import MyComponent from "./useRef"
 
-import MyComponent from './useContext'
 
 function App() {
 
