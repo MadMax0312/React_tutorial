@@ -4,9 +4,9 @@ function MyComponent() {
 
     // const [number, setNumber] = useState(0)
  
-    const inputRef1 = useRef()
-    const inputRef2= useRef()
-    const inputRef3= useRef()
+    const inputRef1 = useRef(null)
+    const inputRef2= useRef(null)
+    const inputRef3= useRef(null)
 
     useEffect(()=> {
         console.log('Component Rendered')
